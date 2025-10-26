@@ -97,14 +97,14 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('pages/ui-features/buttons') }}">Buttons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('pages/ui-features/dropdowns') }}">Dropdowns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('pages/ui-features/typography') }}">Typography</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../../pages/forms/basic_elements.html">
+            <a class="nav-link" href="{{ url('pages/forms/basic_elements') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-playlist-play"></i>
               </span>
@@ -112,7 +112,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../../pages/tables/basic-table.html">
+            <a class="nav-link" href="{{ url('pages/tables/basic-table') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-table-large"></i>
               </span>
@@ -120,7 +120,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../../pages/charts/chartjs.html">
+            <a class="nav-link" href="{{ url('pages/charts/chartjs') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
@@ -128,7 +128,7 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="../../pages/icons/mdi.html">
+            <a class="nav-link" href="{{ url('pages/icons/mdi') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-contacts"></i>
               </span>
@@ -145,11 +145,11 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/blank-page.html"> Blank Page </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/error-500.html"> 500 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Register </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('pages/samples/blank-page') }}"> Blank Page </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('pages/samples/error-404') }}"> 404 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('pages/samples/error-500') }}"> 500 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('pages/samples/login') }}"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{ url('pages/samples/register') }}"> Register </a></li>
               </ul>
             </div>
           </li>
