@@ -1,30 +1,20 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// Halaman beranda (Dashboard)
-// Catatan: beri nama 'home' agar mudah direferensikan dari Blade via route('home')
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return view('welcome');
+});
 
-// Route dinamis untuk semua halaman di resources/views/pages/**
-// Contoh: /pages/ui-features/buttons -> view('pages.ui-features.buttons')
-//         /pages/charts/chartjs        -> view('pages.charts.chartjs')
-Route::get('/pages/{view?}', function (string $view = null) {
-    if (!$view) {
-        // Jika path kosong, kembalikan ke dashboard
-        return redirect()->route('home');
-    }
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-    // Ubah path URL 'a/b/c' menjadi dot notation 'a.b.c'
-    $dot = str_replace('/', '.', $view);
-    $fullView = 'pages.' . $dot;
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-    // Render view jika ada, jika tidak kembalikan 404
-    if (view()->exists($fullView)) {
-        return view($fullView);
-    }
-
-    abort(404);
-})->where('view', '.*')->name('pages.view');
+require __DIR__.'/auth.php';
