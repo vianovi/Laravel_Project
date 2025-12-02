@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
+
 class AuthenticatedSessionController extends Controller
 {
     /**
@@ -28,7 +29,16 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        $user = $request->user();
+
+        // Kalau admin, arahkan ke halaman admin
+        if ($user && $user->is_admin) {
+            return redirect()->route('admin.dashboard');
+        }
+
+        // Kalau bukan admin, arahkan ke /dashboard
+        return redirect()->intended('/dashboard');
+
     }
 
     /**

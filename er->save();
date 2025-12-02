@@ -1,0 +1,11 @@
+[90m= [39m[34;4mApp\Models\User[39;24m {#6126
+    [34mid[39m: [35m1[39m,
+    [34mname[39m: "[32mNoviana_ dewi27[39m",
+    [34memail[39m: "[32msilviadewinovianaputri@gmail.com[39m",
+    [34memail_verified_at[39m: [36mnull[39m,
+    #[33mpassword[39m: "[32m$2y$12$m3kt9AQusALNkFJ1YCYEFORKSSAqkgOkMR6QkZUG4SFFzErOmzGD6[39m",
+    #[33mremember_token[39m: "[32mV7zr5tEQVaDRwlGLif0y1L0JpdLiRViajSiZZseBj1znmd7NiQCbkvXacoBI[39m",
+    [34mcreated_at[39m: "[32m2025-11-30 05:40:58[39m",
+    [34mupdated_at[39m: "[32m2025-11-30 05:40:58[39m",
+  }
+
